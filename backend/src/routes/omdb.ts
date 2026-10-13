@@ -13,7 +13,7 @@ router.get("/search", requireAuth, async (req, res) => {
 
   const url = `https://www.omdbapi.com/?apikey=${process.env.OMDB_API_KEY}&s=${encodeURIComponent(q)}`;
   const response = await fetch(url);
-  const data = await response.json();
+  const data = (await response.json()) as { Response: string; Search?: unknown[] };
 
   if (data.Response === "False") {
     return res.json({ results: [] });

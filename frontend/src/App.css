@@ -157,3 +157,17 @@ button.danger {
 .star.filled {
   color: #ffd15b;
 }
+
+.password-rules {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+  color: #a0a4b8;
+}
+
+.password-rules li.met {
+  color: #4cd98a;
+}
